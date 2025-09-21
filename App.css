@@ -1,0 +1,118 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 100%;
+  padding: 15px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Responsive form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Inputs full width */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 0 8px rgba(102, 94, 211, 0.5);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 12px #6a5acd;
+}
+
+/* Button full width with touch-friendly size */
+button {
+  width: 100%;
+  background-color: #6a5acd;
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button:hover,
+button:focus {
+  background-color: #5b4caa;
+}
+
+/* Itinerary day cards stacked vertically */
+.itinerary-days {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.day-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 18px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(119, 75, 190, 0.3);
+  color: #4a3f99;
+}
+
+.day-card h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Activity list bigger touch targets */
+.activity-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Responsive typography for smaller screens */
+@media (max-width: 480px) {
+  body,
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 1rem;
+  }
+  .day-card h4 {
+    font-size: 1.1rem;
+  }
+  button {
+    padding: 12px 0;
+  }
+}
+
+/* Prevent horizontal overflow on mobile */
+html,
+body {
+  overflow-x: hidden;
+}
